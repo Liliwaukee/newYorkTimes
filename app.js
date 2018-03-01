@@ -23,21 +23,28 @@ function getNews() {
 function addNews(){
   const data = JSON.parse(this.responseText);
   const article = data.response.docs;
-
   console.log(article);
+
   const allArticles  = article.map( (article, index) => {
     if(index < 5){
       const title = article.headline.main;
       const snippet = article.snippet;
+      const urlNews = article.web_url;
 
-      let titleNews = document.createElement("h5");
+
+      let titleNews = document.createElement("h4");
       let snippetNews = document.createElement("li");
+      let btnNews = document.createElement("a");
+      btnNews.setAttribute("href", urlNews);
+
 
       titleNews.innerText = title;
       snippetNews.innerText = snippet;
+      btnNews.innerText = "View the news";
 
       responseContainer.appendChild(titleNews);
       responseContainer.appendChild(snippetNews);
+      responseContainer.appendChild(btnNews);
     }
   });
 
