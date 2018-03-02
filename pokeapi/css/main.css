@@ -1,0 +1,38 @@
+@font-face {
+    font-family: pokemonSolid;
+    src: url(../assets/fonts/pokemonSolid.ttf);
+}
+
+header {
+  background: url(../assets/img/pokemon-day.jpg)  no-repeat;
+  background-size: 15%;
+  color: #FFCB05;
+  height: 25vh;
+  padding: 3vh;
+}
+
+#header-title {
+  display: inline-block;
+  font-family: pokemonSolid, sans-serif;
+  -webkit-text-stroke: 1px #2b72b9;
+  color: #FFCB05;
+  text-shadow:
+      3px 3px 0 #000,
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
+}
+
+#pokeball {
+  display: inline-block;
+  height: 10vh;
+}
+
+.pokemon-name {
+  color: #2b72b9;
+  font-family: 'Mukta Malar', sans-serif;
+  font-size: 1.4em;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
